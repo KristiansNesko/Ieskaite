@@ -1,0 +1,64 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.paddle{
+    --position: 50;
+
+    position: absolute;
+    background-color: white;
+    top: calc(var(--position) * 1vh);
+    transform: translateY(-50%);
+    width: 1vh;
+    height: 10vh;
+}
+
+.paddle.labais{
+    left: 1vw;
+}
+
+.paddle.kreisais{
+    right: 1vw;
+}
+
+.bumba{
+    --x: 50;
+    --y: 50;
+
+
+    position: absolute;
+    background-color: white;
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+.rezultats{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vh;
+    color: black;
+}
+
+.rezultats > *{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    opacity: .4;
+}
+
+.rezultats > :first-child {
+    text-align: right;
+    border-right: .5vh solid black;
+}
